@@ -27,16 +27,20 @@ class LoggingInterceptor implements InterceptorContract {
   }
 }
 
-Future<List<Todo>> findAllPost() async {
+Future<List<Post>> findAllPost() async {
   final Client client =
       InterceptedClient.build(interceptors: [LoggingInterceptor()]);
   final Response response =
       await client.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
   final List<dynamic> decodedJson = jsonDecode(response.body);
-  final List<Todo> postagens = [];
+  final List<Post> postagens = [];
   for (Map<String, dynamic> postagemJson in decodedJson) {
-    final Todo postagem = Todo(postagemJson['userId'], postagemJson['id'],
-        postagemJson['title'], postagemJson['body']);
+    final Post postagem = Post(
+      postagemJson['userId'],
+      postagemJson['id'],
+      postagemJson['title'],
+      postagemJson['body'],
+    );
     postagens.add(postagem);
   }
   return postagens;

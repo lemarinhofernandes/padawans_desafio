@@ -1,13 +1,13 @@
-class Todo {
+class Post {
   final int userId;
   final int id;
   final String title;
   final String body;
 
-  Todo(this.userId, this.id, this.title, this.body);
+  Post(this.userId, this.id, this.title, this.body);
 
   @override
   String toString() {
-    return 'Todo{userId: $userId, id: $id, title: $title, body: $body}\n';
+    return 'Post{userId: $userId, id: $id, title: $title, body: $body}';
   }
 }

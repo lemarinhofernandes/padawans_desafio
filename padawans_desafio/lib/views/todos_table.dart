@@ -25,31 +25,28 @@ class TodoTable extends StatelessWidget {
               final List<Todo>? todos = snapshot.data;
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  return SingleChildScrollView(
-                    //scrollDirection: Axis.horizontal,
-                    child: Container(
-                      child: DataTable(
-                        dataRowHeight: 80.0,
-                        horizontalMargin: 10.0,
-                        columnSpacing: 40.0,
-                        showBottomBorder: true,
-                        columns: <DataColumn>[
-                          DataColumn(label: Text('userId')),
-                          DataColumn(label: Text('id')),
-                          DataColumn(label: Text('title')),
-                          DataColumn(label: Text('completed')),
-                        ],
-                        rows: todos!
-                            .map((todo) => DataRow(
-                                  cells: [
-                                    DataCell(Text(todo.userId.toString())),
-                                    DataCell(Text(todo.id.toString())),
-                                    DataCell(Text(todo.title.toString())),
-                                    DataCell(Text(todo.completed.toString())),
-                                  ],
-                                ))
-                            .toList(),
-                      ),
+                  return Container(
+                    child: DataTable(
+                      dataRowHeight: 80.0,
+                      horizontalMargin: 10.0,
+                      columnSpacing: 40.0,
+                      showBottomBorder: true,
+                      columns: <DataColumn>[
+                        DataColumn(label: Text('userId')),
+                        DataColumn(label: Text('id')),
+                        DataColumn(label: Text('title')),
+                        DataColumn(label: Text('completed')),
+                      ],
+                      rows: todos!
+                          .map((todo) => DataRow(
+                                cells: [
+                                  DataCell(Text(todo.userId.toString())),
+                                  DataCell(Text(todo.id.toString())),
+                                  DataCell(Text(todo.title.toString())),
+                                  DataCell(Text(todo.completed.toString())),
+                                ],
+                              ))
+                          .toList(),
                     ),
                   );
                 },

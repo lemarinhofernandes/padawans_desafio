@@ -35,9 +35,12 @@ Future<List<Album>> findAllAlbum() async {
   final List<dynamic> decodedJson = jsonDecode(response.body);
   final List<Album> albuns = [];
   for (Map<String, dynamic> albumJson in decodedJson) {
-    final Album album =
-        Album(albumJson['userId'], albumJson['id'], albumJson['title']);
-    albuns.add(album);
+    final Album album = Album(
+      albumJson['userId'],
+      albumJson['id'],
+      albumJson['title'],
+    );
+      albuns.add(album);
   }
   return albuns;
 }

@@ -22,10 +22,10 @@ class AlbumTable extends StatelessWidget {
             case ConnectionState.active:
               break;
             case ConnectionState.done:
-              final List<Album>? postagens = snapshot.data;
+              final List<Album>? albuns = snapshot.data;
               return ListView.builder(
                 itemBuilder: (context, index) {
-                  //final Post postagem = postagens![index];
+                  //final Album album = albuns![index];
                   return Container(
                     child: DataTable(
                       horizontalMargin: 10.0,
@@ -35,7 +35,7 @@ class AlbumTable extends StatelessWidget {
                         DataColumn(label: Text('id')),
                         DataColumn(label: Text('title')),
                       ],
-                      rows: postagens!
+                      rows: albuns!
                           .map((album) => DataRow(
                                 cells: [
                                   DataCell(Text(album.userId.toString())),
