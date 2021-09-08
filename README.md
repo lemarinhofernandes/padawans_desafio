@@ -8,18 +8,18 @@ Antes de começar, você vai precisar ter instalado em sua máquina o flutter e 
 
 ### 🎲 Rodando na IDE
 
-<h4 Clone este repositório</h4>
+<h4> Clone este repositório</h4>
 $ git clone <https://github.com/lemarinhofernandes/padawans_desafio.git>
 
-<h4 Abra uma IDE que suporte o Flutter e ajuste seus plugins</h4>
+<h4> Abra uma IDE que suporte o Flutter e ajuste seus plugins</h4>
 
-<h4 Abra o repositorio clonado</h4>
+<h4> Abra o repositorio clonado</h4>
 
-<h4 Configure o flutter e dart SDK</h4>
+<h4> Configure o flutter e dart SDK</h4>
 
-<h4 Abra seu emulador de smartphone</h4>
+<h4> Abra seu emulador de smartphone</h4>
 
-<h4 Dê "run" na "main.dart"</h4>
+<h4> Dê "run" na "main.dart"</h4>
 
 <p align="center">
   <img width="190" height="338" src="assets/demo.gif"> 
