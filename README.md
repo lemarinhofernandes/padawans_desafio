@@ -19,7 +19,7 @@ $ git clone <https://github.com/lemarinhofernandes/padawans_desafio.git>
 
 # Abra seu emulador de smartphone
 
-# De "run" na "main.dart
+# Dê "run" na "main.dart"
 
 <p align="center">
   <img width="190" height="338" src="assets/demo.gif"> 
