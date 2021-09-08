@@ -21,3 +21,6 @@ $ git clone <https://github.com/lemarinhofernandes/padawans_desafio.git>
 
 # De "run" na "main.dart
 
+<p align="center">
+  <img width="460" height="300" src="assets/demo.gif"> 
+</p>
