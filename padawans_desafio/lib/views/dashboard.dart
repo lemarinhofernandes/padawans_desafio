@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:padawans_desafio/controller/control_flow.dart';
-import 'package:padawans_desafio/controller/feature_item.dart';
+import 'package:padawans_desafio/models/feature_item.dart';
 
 class Dashboard extends StatelessWidget {
+  final ControlFlow _controlFlow = ControlFlow();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,17 +26,17 @@ class Dashboard extends StatelessWidget {
                 FeatureItem(
                   'POSTAGENS',
                   Icons.arrow_upward,
-                  onClick: () => showPosts(context),
+                  onClick: () => _controlFlow.showPosts(context),
                 ),
                 FeatureItem(
                   'ALBUNS',
                   Icons.album,
-                  onClick: () => showAlbuns(context),
+                  onClick: () => _controlFlow.showAlbuns(context),
                 ),
                 FeatureItem(
                   'TO-DOs',
                   Icons.description,
-                  onClick: () => showTodos(context),
+                  onClick: () => _controlFlow.showTodos(context),
                 ),
               ],
             ),
