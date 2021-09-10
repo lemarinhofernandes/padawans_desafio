@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:padawans_desafio/controller/progress.dart';
-import 'package:padawans_desafio/http/webclient_album.dart';
+import 'package:padawans_desafio/http/webclients/webclient_album.dart';
 import 'package:padawans_desafio/models/album.dart';
 
 class AlbumTable extends StatelessWidget {

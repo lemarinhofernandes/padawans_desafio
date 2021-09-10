@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:padawans_desafio/controller/error_message.dart';
 import 'package:padawans_desafio/controller/progress.dart';
-import 'package:padawans_desafio/http/webclient_post.dart';
+import 'package:padawans_desafio/http/webclients/webclient_post.dart';
 import 'package:padawans_desafio/models/post.dart';
 
 class PostTable extends StatelessWidget {

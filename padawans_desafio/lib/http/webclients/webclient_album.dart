@@ -1,16 +1,14 @@
 import 'dart:convert';
+import 'package:padawans_desafio/http/webclient.dart';
 import 'package:padawans_desafio/models/album.dart';
 import 'package:http/http.dart';
-import 'package:http_interceptor/http/http.dart';
-
-import 'interceptors/logging_interceptor.dart';
 
 class AlbumWebClient {
+  final WebClientUrl _baseUrl =
+      WebClientUrl('https://jsonplaceholder.typicode.com/albums');
+
   Future<List<Album>> findAllAlbum() async {
-    final Client client =
-        InterceptedClient.build(interceptors: [LoggingInterceptor()]);
-    final Response response = await client
-        .get(Uri.parse('https://jsonplaceholder.typicode.com/albums'));
+    final Response response = await client.get(Uri.parse(_baseUrl.Url));
     final List<dynamic> decodedJson = jsonDecode(response.body);
     final List<Album> albuns = [];
     for (Map<String, dynamic> albumJson in decodedJson) {
