@@ -9,6 +9,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(9,231,218,0.85),
       appBar: AppBar(
+        backgroundColor: Theme.of(context).primaryColor,
         title: Center(child: Text('Seja bem vindo, Padawan!')),
       ),
       body: Column(
