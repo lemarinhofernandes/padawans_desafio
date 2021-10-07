@@ -28,6 +28,7 @@ class TodoTable extends StatelessWidget {
                 final List<Todo>? todos = snapshot.data;
                 if (todos!.isNotEmpty) {
                   return ListView.builder(
+                    itemCount: 1,
                     itemBuilder: (context, index) {
                       return Container(
                         child: DataTable(

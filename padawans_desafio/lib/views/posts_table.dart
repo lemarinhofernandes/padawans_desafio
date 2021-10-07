@@ -27,6 +27,7 @@ class PostTable extends StatelessWidget {
                 final List<Post>? postagens = snapshot.data;
                 if(postagens!.isNotEmpty) {
                   return ListView.builder(
+                    itemCount: 1,
                     itemBuilder: (context, index) {
                       //final Post postagem = postagens![index];
                       return Container(

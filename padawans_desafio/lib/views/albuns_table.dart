@@ -26,6 +26,7 @@ class AlbumTable extends StatelessWidget {
                 final List<Album>? albuns = snapshot.data;
                 if(albuns!.isNotEmpty){
                   return ListView.builder(
+                    itemCount: 1,
                     itemBuilder: (context, index) {
                       //final Album album = albuns![index];
                       return Container(
